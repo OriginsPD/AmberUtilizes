@@ -12,7 +12,7 @@
 
                 <div class="py-4">
 
-                    <x-modal.form title="Products" :useBtn="false">
+                    <x-modal.form :form="false" title="Products" :useBtn="false">
 
                         <x-slot name="modalBtn">
 
@@ -34,13 +34,14 @@
 
                             <x-table.body>
 
-                                @forelse($products as $product)
+                              @forelse($products as $product)
 
                                     <x-table.row>
 
                                         <x-table.data class="w-2/6"> {{ $product->name }} </x-table.data>
 
-                                        <x-table.data class="w-2/6"> $ {{ number_format($product->price,'2') }} </x-table.data>
+                                        <x-table.data class="w-2/6">
+                                            $ {{ number_format($product->price,'2') }} </x-table.data>
 
                                         <x-table.data class="text-right container w-2/6">
 
@@ -49,7 +50,7 @@
                                                 <div class=" space-x-6">
 
                                                     <input wire:model="qty.{{ $product->id }}"
-                                                        type="number" class="form-input w-12 h-10 border">
+                                                           type="number" class="form-input w-12 h-8 border">
 
                                                     <a wire:click.prevent="addToCart({{ $product->id }},{{ $product->price }})"
                                                        class="px-4 py-2 bg-blue-500 text-gray-100 text-md
@@ -59,10 +60,11 @@
 
                                                     </a>
                                                 </div>
+
                                             @else
 
                                                 <a wire:click.prevent="removeFromCart({{ $product->id }})"
-                                                    class="px-4 py-2 bg-red-500 text-gray-100 text-md
+                                                   class="px-4 py-2 bg-red-500 text-gray-100 text-md
                                                                rounded focus:border-4 cursor-pointer border-red-300">
 
                                                     Remove From Cart
@@ -93,10 +95,12 @@
 
                         </x-table>
 
-                        <div class="p-3 m-2">
+                        <div>
+                            <div class="p-3 m-2">
 
-                            {{ $products->links() }}
+                                {{ $products->links() }}
 
+                            </div>
                         </div>
 
                     </x-modal.form>

@@ -34,7 +34,7 @@ class Dashboard extends Component
         $this->dispatchBrowserEvent('close-modal');
         $this->dispatchBrowserEvent('alert-modal');
 
-        $this->resetPage();
+
 
     }
 

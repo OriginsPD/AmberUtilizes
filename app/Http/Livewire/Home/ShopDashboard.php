@@ -11,8 +11,6 @@ class ShopDashboard extends Component
 {
     use WithPagination;
 
-    protected int $pagination = 4;
-
     public array $qty = [];
 
     public $productsQty;
@@ -35,6 +33,7 @@ class ShopDashboard extends Component
     public function removeFromCart($productID): void
     {
         Cart::where('product_id', $productID)->delete();
+
         if (($key = array_search($productID, $this->cartProduct, true)) !== false) {
             unset($this->cartProduct[$key]);
 
@@ -68,9 +67,10 @@ class ShopDashboard extends Component
         }
 
         return view('livewire.home.shop-dashboard', [
-            'products' => Product::paginate($this->pagination),
-        ])
-            ->extends('layouts.app');
+            'products' => Product::paginate(4),
+        ])->extends('layouts.app');
+
     }
+
 
 }

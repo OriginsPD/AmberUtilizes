@@ -24,7 +24,7 @@
 
                         <x-slot name="modalBtn">
 
-                            <x-modal.button wire:click.prevent="addProducts"> View</x-modal.button>
+                            <x-modal.button wire:click.prevent="addProducts"> Add </x-modal.button>
 
                         </x-slot>
 
@@ -32,9 +32,9 @@
 
                             <x-slot name="header">
 
-                                <x-table.head> name</x-table.head>
+                                <x-table.head> Name </x-table.head>
 
-                                <x-table.head> Quantity</x-table.head>
+                                <x-table.head> Quantity </x-table.head>
 
                                 <x-table.head> Price </x-table.head>
 
@@ -97,6 +97,7 @@
 
             <x-modal.form wire:submit.prevent="storeProduct"
                           @click.away.window="isOpen = false"
+                          :form="true"
                           title="New Product">
 
                 <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">

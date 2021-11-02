@@ -7,8 +7,6 @@
         <div class="px-8 px-8 mt-4 border-t pt-4">
 
 
-            <span class="text-xs text-gray-500 mt-2">Save 20% with annual billing</span>
-
         </div>
 
         <div class="px-8 space-y-4 mt-4 overflow-y-scroll">
@@ -41,7 +39,7 @@
 
                 <span class="font-semibold">Today you pay </span>
 
-                <span class="font-semibold">Grand Total: $ {{ $cartSum }}</span>
+                <span class="font-semibold">Grand Total: $ {{ $grandTotal }}</span>
 
             </div>
 

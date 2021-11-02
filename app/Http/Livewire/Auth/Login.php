@@ -27,19 +27,21 @@ class Login extends Component
         if (Auth::attempt(['email' => $this->user->email,'password' => $this->password])){
 
 
-            $isRole = Customer::where('username', auth()->user()->username)
-                ->exists();
 
-            if (!$isRole) {
+            if (auth()->user()->isAdmin) {
 
                 $this->redirect(route('admin.dashboard'));
 
             }
-            $this->redirect('/');
+            else{
+
+                $this->redirect('/');
+            }
+
 
         }
 
-        $this->addError('user.email',trans('auth.failed'));
+        $this->addError('user.email',trans('auth.password'));
 
     }
 

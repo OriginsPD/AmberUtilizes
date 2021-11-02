@@ -1,6 +1,7 @@
 @props([
     'title' => false,
-    'useBtn' => false
+    'useBtn' => false,
+    'form' => false
 ])
 
 <section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
@@ -20,10 +21,23 @@
 
     </h2>
 
-    <form {{ $attributes }}>
+    @if($form)
 
-        {{ $slot }}
+        <form {{ $attributes }}>
 
-    </form>
+            {{ $slot }}
+
+        </form>
+
+
+    @else
+
+        <div {{ $attributes }}>
+
+            {{ $slot }}
+
+        </div>
+
+    @endif
 
 </section>

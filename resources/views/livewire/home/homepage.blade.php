@@ -13,7 +13,7 @@
 
                         </h2>
 
-                        <p class="text-xl text-gray-200 md:pr-16">Learn how to engage with your visitors and teach them about your mission. We're revolutionizing the way customers and businesses interact.</p>
+                        <p class="text-xl text-gray-200 italic md:pr-16">Serving Customers With Style.</p>
 
                     </div>
 
@@ -21,12 +21,15 @@
 
                         <div class="relative ml-4">
 
-                            <img class=" top-0 left-0 transform -rotate-12 border-8 border-white"
-                                 src="https://image.shutterstock.com/image-photo/school-office-supplies-supermarket-trolley-260nw-1913611126.jpg"
-                                 alt="Workplace" width="600" />
+                            <div class="top-0 left-0 transform -rotate-12 border-8 border-white"
+                                 style="background-image: url('https://s.yimg.com/ny/api/res/1.2/4TiD9d08XxiiyQyhxsJ_Og--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNg--/https://s.yimg.com/os/creatr-uploaded-images/2021-07/58eb8790-ec33-11eb-bff3-f8cca56198fa'); width: 600px; height: 400px">
+                            </div>
 
-                            <img class="transform -rotate-12 border-8 border-white absolute top-0 left-0 -ml-16 mt-28 hover:shadow-outline"
-                                 src="https://image.freepik.com/free-photo/shopping-cart-with-school-supplies_113725-1002.jpg" width="600" />
+
+                            <div class="transform -rotate-12 border-8 border-white absolute top-0 left-0 -ml-16 mt-28"
+                                 style="background-image: url('https://img.freepik.com/free-photo/shopping-cart-with-school-supplies_113725-1002.jpg?size=626&ext=jpg'); width: 600px; height: 400px">
+                            </div>
+
 
                         </div>
 
